@@ -1,6 +1,8 @@
 node_modules
 dist
 build
+lib
 test/api.js
 test/store.js
 test-results
+examples/**/*

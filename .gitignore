@@ -1,6 +1,7 @@
 ## Other Repos
 #################
 .svn
+.editorconfig
 
 ## Project Specific
 #################
@@ -11,15 +12,21 @@ out
 .coverdata
 .coverrun
 dist
+build
+lib
+coverage
 env
 reports/*
 !reports/.gitkeep
 npm-debug.log
+package-lock.json
 .sass-cache
 logs/
 ./config/development.js
 test-results
 .gitkeep
+.jest-cache
+.webpack-stats.*
 
 
 ## OSX
