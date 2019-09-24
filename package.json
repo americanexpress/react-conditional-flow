@@ -27,7 +27,6 @@
     "prebuild": "npm run clean && npm run lint",
     "posttest": "npm run lint",
     "test": "jest",
-    "prepublish": "npm run build",
     "githook:pre-commit": "npm run test",
     "githook:commit-msg": "commitlint --edit $GIT_PARAMS"
   },
