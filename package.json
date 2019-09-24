@@ -53,6 +53,6 @@
     "jest": "^23.0.0",
     "react-dom": "^16.4.2",
     "react-test-renderer": "^16.2.0",
-    "rimraf": "^3.0.0"
+    "rimraf": "^2.5.2"
   }
 }
