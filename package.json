@@ -1,6 +1,6 @@
 {
   "name": "react-conditional-flow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "lib"
   ],
@@ -24,9 +24,10 @@
     "build": "babel src -d lib --copy-files",
     "clean": "rimraf lib",
     "lint": "eslint --ignore-path .eslintignore --ext js,jsx,snap .",
-    "prebuild": "npm run clean && npm run lint",
+    "prebuild": "npm run lint",
     "posttest": "npm run lint",
     "test": "jest",
+    "postinstall": "npm run build",
     "githook:pre-commit": "npm run test",
     "githook:commit-msg": "commitlint --edit $GIT_PARAMS"
   },
