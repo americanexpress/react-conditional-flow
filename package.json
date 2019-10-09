@@ -1,6 +1,6 @@
 {
   "name": "react-conditional-flow",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "files": [
     "lib"
   ],
@@ -9,9 +9,9 @@
   "contributors": [
     "Arivu Arumugam <arivu.arumugam@aexp.com>",
     "Prasath Pandiyan <Prasath.P.Pandiyan@aexp.com>",
-    "Emit Dutcher <Emit.Dutcher@aexp.com>"
+    "Emit Dutcher <Emit.Dutcher1@aexp.com>"
   ],
-  "author": "Emit Dutcher <Emit.Dutcher@aexp.com>",
+  "author": "Emit Dutcher <Emit.Dutcher1@aexp.com>",
   "license": "Apache-2.0",
   "keywords": [
     "control-flow",
@@ -24,10 +24,9 @@
     "build": "babel src -d lib --copy-files",
     "clean": "rimraf lib",
     "lint": "eslint --ignore-path .eslintignore --ext js,jsx,snap .",
-    "prebuild": "npm run lint",
     "posttest": "npm run lint",
     "test": "jest",
-    "postinstall": "npm run build",
+    "prepare": "npm run build",
     "githook:pre-commit": "npm run test",
     "githook:commit-msg": "commitlint --edit $GIT_PARAMS"
   },
@@ -53,6 +52,6 @@
     "jest": "^23.0.0",
     "react-dom": "^16.4.2",
     "react-test-renderer": "^16.2.0",
-    "rimraf": "^2.5.2"
+    "rimraf": "^3.0.0"
   }
 }

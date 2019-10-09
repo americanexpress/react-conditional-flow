@@ -190,9 +190,9 @@ const renderComponentWithAPICallFailure = () => <SudoCode />;
 
 <TryCatch
   try={renderComponentWithAPICallFailure}
-  catch={(error, info) => (
+  catch={(error) => (
     <span>
-      An error has occurred! {error}: {info}
+      An error has occurred! {error}
     </span>
   )}
 />;
