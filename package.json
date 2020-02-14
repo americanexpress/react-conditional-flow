@@ -1,6 +1,6 @@
 {
   "name": "react-conditional-flow",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "files": [
     "lib"
   ],
@@ -26,6 +26,7 @@
     "lint": "eslint --ignore-path .eslintignore --ext js,jsx,snap .",
     "posttest": "npm run lint",
     "test": "jest",
+    "prepare": "npm run build",
     "githook:pre-commit": "npm run test",
     "githook:commit-msg": "commitlint --edit $GIT_PARAMS"
   },
