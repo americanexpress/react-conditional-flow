@@ -12,18 +12,30 @@
  * the License.
  */
 
-import ElseIf from './components/ElseIf';
-import TryCatch from './components/TryCatch';
-import TryCatchFinally from './components/TryCatchFinally';
-import Switch from './components/Switch';
-import Case from './components/Case';
-import Default from './components/Default';
+import { func } from 'prop-types';
 
-export default {
-  ElseIf,
-  TryCatch,
-  TryCatchFinally,
-  Switch,
-  Case,
-  Default,
+const TryCatchFinally = ({ try: renderTry, catch: fallBack, finally: renderFinally }) => {
+  try {
+    return renderTry();
+  } catch (e) {
+    return fallBack(e);
+  } finally {
+    renderFinally();
+  }
 };
+
+TryCatchFinally.propTypes = {
+  try: func,
+  catch: func,
+  finally: func,
+};
+
+TryCatchFinally.defaultProps = {
+  try: null,
+  catch: (e) => {
+    throw new Error(e);
+  },
+  finally: null,
+};
+
+export default TryCatchFinally;
